@@ -1,3 +1,5 @@
+#taken from CTF times
+
 import requests
 from bs4 import BeautifulSoup
 
