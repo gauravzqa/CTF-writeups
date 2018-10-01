@@ -1,3 +1,8 @@
 It's a simple problem gives away the flag by strings.
 Can be done by gdb as well by reading the value of $esi register.
 The secret_password function is prints "s3cr3t_backd00r_passw0rd"
+
+*gdb method*
+so we see that function at this address ->$0x600df0 stores value of the secret password in register name $esi
+fo reading the value of register esi will yield us the secret password, also whatevert input we are entering to the ./level0 file is stored in $rax and $rdi, so they will give back the value we are entering.
+set another breakpoint at strcmp and reading the values of these registers will give us the secret pass.
